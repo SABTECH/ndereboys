@@ -31,7 +31,7 @@ if (!mysqli_query($con,$sql)) {
 }
 
 echo "Record successfully inserted!<br>";
-echo "Database updated with: $studentFName','$studentMName', '$studentLName', '$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County'<br>";
+echo "Database updated with: '$studentFName','$studentMName', '$studentLName', '$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County'<br>";
 echo "You have updated database successfully!<a href=enrolment.html>Click Here to go back";
 
 
