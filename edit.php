@@ -27,7 +27,7 @@ $sql = "UPDATE enrolment
 $q = $db->prepare($sql);
 $q->execute(array($id,$studentFName,$studentMName, $studentLName, $studentDOB,$gender,$studentCounty,$formerInstitution,$classtoJoin,$parentName,$mobileNumber,$email,$County));
 //header("location: index.php");
- echo "Update complete <a href='index.php'>Click here to Exit</a>";
+ echo "Update complete <a href='index.html'>Click here to Exit</a>";
 ?>
 
 
