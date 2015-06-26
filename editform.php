@@ -1,5 +1,6 @@
 <?php
-	include('connect.php');
+	//include('connect.php');
+	$db = new PDO('mysql:host=localhost;dbname=ndere_boys','root','');
 	$id=$_GET['id'];
 	//$result = $db->prepare("SELECT * FROM customer_registration WHERE ID= :userid");
 	$result = $db->prepare("SELECT * FROM enrolment WHERE enr_id = :userid");
