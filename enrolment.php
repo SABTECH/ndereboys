@@ -1,4 +1,5 @@
-<?php     
+<?php
+error_reporting(0);     
 
 $con = mysqli_connect("localhost", "root", "", "ndere_boys" ) or die(mysqli_error());
 
@@ -29,7 +30,7 @@ mysqli_select_db ($con, "ndere_boys");
 
 if ( $studentFName == "" || $studentMName == "" || $studentLName == ""|| $studentDOB == "" || $gender == "" || $studentCounty == "" || $formerInstitution == "" || $classtoJoin == "" || $parentName == "" || $mobileNumber == "" || $email == "" || $County == "" )
 {
-Echo "Please fill the empty field!";
+Echo "Please fill the empty field!<br>";
 }
 Else
 
