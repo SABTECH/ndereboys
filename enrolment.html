@@ -7,6 +7,7 @@
 <meta name="author" content="LakeHub Kisumu">
 <!-- styles -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/enrolment.css" rel="stylesheet">
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.js"></script>
@@ -32,11 +33,10 @@
 			</ul>
 		</div>
 	</div>
-</nav> <!-- end of nav bar -->
+</nav> 
 <body>
 <div class="container">
-<?php $gender=$_GET['gender']; ?>
-<form class="form-horizontal" role="form" method="post" action="enrolment.php">
+<form class="form-inline well" role="form" method="post" action="enrolment.php" >
 	<fieldset>
 	<legend>Student's Details</legend>
 	<div class="row">
@@ -61,26 +61,28 @@
 		<div class="row">
 					<div class="form-group col-md-3">
 						<label for="studentDOB">Date of Birth YY-MM-DD</label>
-	<input type="date" class="form-control"	id ="studentDOB" name = "studentDOB" placeholder="Last Name">
+	<input type="date" class="form-control"	id ="studentDOB" name = "studentDOB" placeholder="YYYY-MM-DD">
 					</div>
 					<div class="form-group col-md-1"></div>
 					
 					<div class="form-group col-md-3">
-					    
+					    <label for="gender">Select Gender:</label>
 						<label for="gender">
-							<input type="radio" class="radio-inline" id="gender" name="gender" value='0'> Male
+							<input type="radio" class="radio-inline" id="1" name="gender" value='0'> Male
 							</label>
-					<label for="gender">
-							<input type="radio" class="radio-inline" id="gender" name="gender" value='1'> Female
+				
+					
+						<label for="gender">
+							<input type="radio" class="radio-inline" id="2" name="gender" value='1'> Female
 						</label>
 					</div>
-					
+					<div class="form-group col-md-1"></div>
 					<div class="form-group col-md-3">
 						<label for="studentCounty">Current Residence (County) </label>
 	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County">
 					</div>
 
-		</div>
+	
 	</fieldset>
 	<fieldset>
 		<legend>Educational Background</legend>
@@ -94,7 +96,24 @@
 						<label for="classtoJoin">Class to Join</label>
 	<input type="text" class="form-control" id ="classtoJoin" name = "classtoJoin"	placeholder="Class in Numbers">
 					</div>
-							</div>  <!-- end of row -->
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
+			
+      
+ 
+    
+
+     
+		
+        
+	
+ 
+     
+    
+  
+     </div>
+   
+    </div>  <!-- end of row -->
 	</fieldset> <!-- end of fieldset -->
 	<fieldset>
 		<legend>Parent's Details</legend>
@@ -111,23 +130,23 @@
 <div class="form-group col-md-1"></div>
 <div class="form-group col-md-2">
 						<label for="email">Email Address</label>
-<input type="email" class="form-control" id ="email" name ="email" placeholder="example@email.com">
+<input type="email" class="form-control" id ="email" name ="email" placeholder="username@domain.com">
 					</div>
 <div class="form-group col-md-1"></div>
 <div class="form-group col-md-3">
-						<label for="County">Residence</label>
-<input type="text" class="form-control"	id ="County" name ="County" placeholder="County">
+						<label for="County">Current Residence (County)</label>
+<input type="text" class="form-control"	id ="County" name ="County" placeholder="Resident County">
 					</div>
 				</div>
 	</fieldset>
-	<fieldset>
-		<legend>Results from Former School</legend>
-	<div class="form-group col-md-3">	
-			<input type="file" name="attachedFiles" maxlength=50 allow="text/*" >
-	</div>		
-	</fieldset>
+    <br>
+	
+    
+    <input type="submit" class="btn btn-info" value="Submit">
 
-	<input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
+	
+    </form>
+   
 </div> <!-- end of container -->
 </body>
 <script src="assets/js/bootstrap.min.js"></script>
