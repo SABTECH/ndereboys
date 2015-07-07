@@ -52,7 +52,7 @@ $query_upload  = "insert into enrolment(studentFName, studentMName, studentLName
 echo "Record successfully inserted!<br>Update complete <a href='enrolment.html'>Click here to Exit</a>";
 
 	}else{
-echo "Error While uploading image on the server.<br> Please Fill the empty fields!<br><a href='enrolment.html'>Click here to Exit</a>";
+exit ("Error While uploading image on the server.<br> Please Fill the empty fields!<br><a href='enrolment.html'>Click here to Exit</a>");
 	}
 	
 	?>
