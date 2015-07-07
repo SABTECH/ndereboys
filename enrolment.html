@@ -1,17 +1,60 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
 <meta charset="utf-8">
 <title>Ndere Boys Boarding Primary School | Enrolment</title>
+
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/enrolment.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="LakeHub Kisumu">
 <!-- styles -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/enrolment.css" rel="stylesheet">
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 			<script src="../assets/js/html5shiv.js"></script>
 		<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+<script type="text/javascript">
+   function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+<script type="text/javascript">
+   function resetForm(myFormId)
+   {
+       var myForm = document.getElementById(myFormId);
+
+       for (var i = 0; i < myForm.elements.length; i++)
+       {
+           if ('submit' != myForm.elements[i].type && 'reset' != myForm.elements[i].type)
+           {
+               myForm.elements[i].checked = false;
+               myForm.elements[i].value = '';
+               myForm.elements[i].selectedIndex = 0;
+           }
+       }
+   }
+   </script>
+   
 </head>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
@@ -36,7 +79,7 @@
 </nav> 
 <body>
 <div class="container">
-<form class="form-inline well" role="form" method="post" action="enrolment.php" >
+<form class="form-horizontal" enctype="multipart/form-data" role="form" method="post" action="enrolment.php" >
 	<fieldset>
 	<legend>Student's Details</legend>
 	<div class="row">
@@ -64,16 +107,13 @@
 	<input type="date" class="form-control"	id ="studentDOB" name = "studentDOB" placeholder="YYYY-MM-DD">
 					</div>
 					<div class="form-group col-md-1"></div>
-					
 					<div class="form-group col-md-3">
 					    <label for="gender">Select Gender:</label>
 						<label for="gender">
-							<input type="radio" class="radio-inline" id="1" name="gender" value='0'> Male
+							<input type="radio" class="radio-inline" id="0" name="gender" value='Male'> Male
 							</label>
-				
-					
 						<label for="gender">
-							<input type="radio" class="radio-inline" id="2" name="gender" value='1'> Female
+							<input type="radio" class="radio-inline" id="1" name="gender" value='Female'> Female
 						</label>
 					</div>
 					<div class="form-group col-md-1"></div>
@@ -81,8 +121,7 @@
 						<label for="studentCounty">Current Residence (County) </label>
 	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County">
 					</div>
-
-	
+                 </div>
 	</fieldset>
 	<fieldset>
 		<legend>Educational Background</legend>
@@ -98,21 +137,28 @@
 					</div>
 					<div class="form-group col-md-1"></div>
 					<div class="form-group col-md-3">
-			
-      
- 
+			<label for="Passport">Attach Student Passport Photo</label>
+    <table style="border-collapse: collapse; font: 12px Tahoma;" border="1" cellspacing="5" cellpadding="5">
+	<tbody><tr>
+	<td>
     
-
-     
-		
-        
+    <input  name="uploadedimage" type="file" onchange="readURL(this);" />
+    
 	
- 
-     
+	</td>
     
-  
-     </div>
    
+	
+	</tr>
+	<tr>
+	<td>
+    
+	</td>
+	</tr>
+	</tbody></table>
+    
+    </div>
+    <div class="form-group col-md-1"><img id="blah" src="#" alt="" /></div>
     </div>  <!-- end of row -->
 	</fieldset> <!-- end of fieldset -->
 	<fieldset>
@@ -120,7 +166,7 @@
 		<div class="row">
 			<div class="form-group col-md-2">
 						<label for="parentName">Parent's Name</label>
-	<input type="text" class="form-control" id ="parentName" name ="parentName"	placeholder="Parent">
+<input type="text" class="form-control" id ="parentName" name ="parentName"	placeholder="Parent">
 					</div>
 <div class="form-group col-md-1"></div>
 <div class="form-group col-md-2">
@@ -139,14 +185,15 @@
 					</div>
 				</div>
 	</fieldset>
-    <br>
-	
-    
-    <input type="submit" class="btn btn-info" value="Submit">
-
-	
-    </form>
-   
+    <fieldset>
+<div class="row">
+<div class="form-group col-md-3"><input type="submit" class="btn btn-info" value="Submit"></div>
+<div class="form-group col-md-3"></div>
+<div class="form-group col-md-3"></div>
+<div class="form-group col-md-3"> <input type="reset" class="btn btn-info" value="Reset" onclick="resetForm('myFormId'); return false;" /></div>  
+</div>
+</fieldset>
+</form>
 </div> <!-- end of container -->
 </body>
 <script src="assets/js/bootstrap.min.js"></script>
