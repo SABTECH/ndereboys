@@ -29,7 +29,7 @@ function GetImageExtension($imagetype)
 	     }
 	if (!empty($_FILES["uploadedimage"]["name"])) {
 		
-	    $destination_path = "uploads/";
+	    $destination_path = "assets/img/";
 	    
 	    $file_name=$_FILES["uploadedimage"]["name"];
 		
