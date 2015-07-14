@@ -1,0 +1,25 @@
+.well well-lg{
+	border-spacing: 10px;
+margin: 5px;
+ border: 5px solid #cc9900;
+}
+section{
+
+	padding-left: 3%;
+	padding-right: 3%;
+}
+div.img a:hover img {
+    border: 5px solid #cc9900;
+    width:304;
+	 height:236;
+}
+   
+
+h1{
+	text-shadow:2px 2px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bolder;
+	font-family: arial;
+	font-color:#FFFF00;
+font-style:italic ;}

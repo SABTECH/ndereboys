@@ -1,0 +1,7 @@
+img{
+	width:900;
+	height:700;
+	border:5px;
+	margin:20px;
+
+}
