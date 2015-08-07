@@ -1,17 +1,31 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
 <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
 <meta charset="utf-8">
 <title>Ndere Boys Boarding Primary School | Enrolment</title>
 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/enrolment.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css" />
+
+
+<link href="assets/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="LakeHub Kisumu">
+
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/transition.js"></script>
+<script type="text/javascript" src="assets/js/collapse.js"></script>
+<script type="text/javascript" src="assets/js//bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
 <!-- styles -->
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -22,6 +36,9 @@
   article, aside, figure, footer, header, hgroup, 
   menu, nav, section { display: block; }
 </style>
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
+                                          
 <script type="text/javascript">
    function readURL(input) {
             if (input.files && input.files[0]) {
@@ -38,7 +55,19 @@
             }
         }
 </script>
+ 
 <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker9').datetimepicker({
+                viewMode: 'years'
+                //datetimepicker9.value: 'years'
+                //value: 'YY-MM-DD'
+                //format: 'YY-MM-DD'
+
+            });
+        });
+    </script>
+    <script type="text/javascript">
    function resetForm(myFormId)
    {
        var myForm = document.getElementById(myFormId);
@@ -54,7 +83,9 @@
        }
    }
    </script>
-   </head>
+  
+   
+</head>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -100,28 +131,42 @@
 	</fieldset>
 	<fieldset>
 	<legend>Bio Data</legend>
-		<div class="row">
-					<div class="form-inline col-md-3">
-						<label for="studentDOB">Date of Birth YY-MM-DD</label>
-	<input type="date" class="form-control"	id ="studentDOB" name = "studentDOB" placeholder="YYYY-MM-DD">
-					</div>
+		
+	<div class="row">
+        <div class="form-inline col-md-3" style="height:130px;">
+        <label for="datetimepicker9">Date of Birth YY-MM-DD</label>
+            
+         
+            <div class='input-group date' id='datetimepicker9'>
+                <input data-provide="datepicker-inline" type='text' class="form-control" id="datetimepicker9" name="datetimepicker9" value="DateTimePicker">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+            </div>
+            
+        </div>
+
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
 					    <label for="gender">Select Gender:</label>
 						<label for="gender">
-							<input type="radio" class="radio-inline" id="0" name="gender" value='Male'> Male
+							<input type="radio" class="radio-inline" id="1" name="gender" value='Male'> Male
 							</label>
 						<label for="gender">
-							<input type="radio" class="radio-inline" id="1" name="gender" value='Female'> Female
+							<input type="radio" class="radio-inline" id="2" name="gender" value='Female'> Female
 						</label>
 					</div>
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
-						<label for="studentCounty">Residence (County) </label>
+						<label for="studentCounty">Current Residence (County) </label>
 	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County">
 					</div>
-                 </div>
+               </div>
+              
+
 	</fieldset>
+    
 	<fieldset>
 		<legend>Educational Background</legend>
 		<div class="row">
@@ -140,15 +185,22 @@
     <table style="border-collapse: collapse; font: 12px Tahoma;" border="1" cellspacing="5" cellpadding="5">
 	<tbody><tr>
 	<td>
-	<img id="blah" src="#" alt="Your Image" />
+    <img id="blah" src="#" alt="" />
     <input  name="uploadedimage" type="file" onchange="readURL(this);" />
-    </td>
-    </tr>
+    
+	
+	</td>
+    
+   
+	
+	</tr>
 	<tr>
 	<td>
-    </td>
+    
+	</td>
 	</tr>
 	</tbody></table>
+    
     </div>
     <div class="form-inline col-md-1"></div>
     </div>  <!-- end of row -->
@@ -171,24 +223,24 @@
 <input type="email" class="form-control" id ="email" name ="email" placeholder="username@domain.com">
 					</div>
 <div class="form-inline col-md-1"></div>
-<div class="form-inline col-md-2">
-			            <label for="County">Residence (County)</label>
+<div class="form-inline col-md-3">
+						<label for="County">Current Residence (County)</label>
 <input type="text" class="form-control"	id ="County" name ="County" placeholder="Resident County">
 					</div>
-				</div>   <!-- end of row  -->
+				</div>
 	</fieldset>
     <fieldset>
+    <br>
 <div class="row">
-<br>
 <div class="form-inline col-md-3"><input type="submit" class="btn btn-info" value="Submit"></div>
 <div class="form-inline col-md-3"></div>
 <div class="form-inline col-md-3"></div>
 <div class="form-inline col-md-3"> <input type="reset" class="btn btn-info" value="Reset" onclick="resetForm('myFormId'); return false;" /></div>  
 </div>
 </fieldset>
+</div>
 </form>
 </div> <!-- end of container -->
 </body>
 <script src="assets/js/bootstrap.min.js"></script>
 </html>
-
