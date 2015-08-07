@@ -5,7 +5,7 @@ $con = mysqli_connect("localhost", "root", "", "ndere_boys" ) or die(mysqli_erro
 $studentFName = mysqli_real_escape_string($con, $_POST['studentFName']);
 $studentMName = mysqli_real_escape_string($con,$_POST['studentMName']);
 $studentLName = mysqli_real_escape_string($con, $_POST['studentLName']);
-$studentDOB = mysqli_real_escape_string($con,$_POST['studentDOB']);
+$studentDOB = mysqli_real_escape_string($con,$_POST['datetimepicker9']);
 $gender = mysqli_real_escape_string($con, $_POST['gender']);
 $studentCounty = mysqli_real_escape_string($con,$_POST['studentCounty']);
 $formerInstitution = mysqli_real_escape_string($con,$_POST['formerInstitution']);
@@ -44,7 +44,7 @@ function GetImageExtension($imagetype)
 		
 		move_uploaded_file($temp_name,$target_path);
 	
-$query_upload  = "insert into enrolment(studentFName, studentMName, studentLName, studentDOB, gender, studentCounty, formerInstitution, classJoin, parentName, mobileNumber, email, County,image, images_path, submission_date ) values ('$studentFName','$studentMName','$studentLName','$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County','$temp_name', '$target_path', '$date')";
+$query_upload  = "insert into enrolment(studentFName, studentMName, studentLName, datetimepicker9, gender, studentCounty, formerInstitution, classJoin, parentName, mobileNumber, email, County,image, images_path, submission_date ) values ('$studentFName','$studentMName','$studentLName','$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County','$temp_name', '$target_path', '$date')";
 
  mysqli_query($con,$query_upload) or die("error in $query_upload == ----> 
     ".mysqli_error($con)); 
@@ -63,7 +63,7 @@ exit ("Error While uploading image on the server.<br> Please Fill the empty fiel
 		<th> studentFName </th>
 		<th> studentMName </th>
 		<th> studentLName </th>
-		<th> studentDOB</th>
+		<th> datetimepicker9</th>
         <th> gender </th>
 		<th> studentCounty </th>
 		<th> formerInstitution </th>
@@ -91,7 +91,7 @@ exit ("Error While uploading image on the server.<br> Please Fill the empty fiel
 		<td><?php echo $row['studentFName']; ?></td>
 		<td><?php echo $row['studentMName']; ?></td>
         <td><?php echo $row['studentLName']; ?></td>
-        <td><?php echo $row['studentDOB']; ?></td>
+        <td><?php echo $row['datetimepicker9']; ?></td>
         <td><?php echo $row['gender']; ?></td>
 		<td><?php echo $row['studentCounty']; ?></td>
         <td><?php echo $row['formerInstitution']; ?></td>
