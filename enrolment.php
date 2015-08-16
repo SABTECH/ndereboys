@@ -39,10 +39,8 @@ function GetImageExtension($imagetype)
 	    $imagename=date("Y-m-d")."-".time().$ext;
 			 
 	    $target_path = $destination_path.basename($file_name);
-	    
-		$date = date("Y-m-d");
-		
-		move_uploaded_file($temp_name,$target_path);
+	    $date = date("Y-m-d H:i:s");
+	    move_uploaded_file($temp_name,$target_path);
 	
 $query_upload  = "insert into enrolment(studentFName, studentMName, studentLName, datetimepicker9, gender, studentCounty, formerInstitution, classJoin, parentName, mobileNumber, email, County,image, images_path, submission_date ) values ('$studentFName','$studentMName','$studentLName','$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County','$temp_name', '$target_path', '$date')";
 
