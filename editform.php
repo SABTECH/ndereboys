@@ -23,25 +23,18 @@ studentDOB<br>
 <input type="text" name="gender" value="<?php echo $row['gender']; ?>" /><br>gender<br>
 <input type="text" name="studentCounty" value="<?php echo $row['studentCounty']; ?>" /><br>
 studentCounty<br>
-
-
 <input type="text" name="formerInstitution" value="<?php echo $row['formerInstitution']; ?>" /><br>
 formerInstitution<br>
 <input type="text" name="classtoJoin" value="<?php echo $row['classJoin']; ?>" /><br>
 classJoin<br>
-
 <input type="text" name="parentName" value="<?php echo $row['parentName']; ?>" /><br>
 parentName<br>
-
 <input type="text" name="mobileNumber" value="<?php echo $row['mobileNumber']; ?>" /><br>
 mobileNumber<br>
-
 <input type="text" name="email" value="<?php echo $row['email']; ?>" /><br>
 email<br>
-
 <input type="text" name="County" value="<?php echo $row['County']; ?>" /><br>
 County<br>
-
 <input type="submit" value="Save" />
 </form>
 <?php
