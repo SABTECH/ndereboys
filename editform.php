@@ -11,14 +11,14 @@
 ?>
 <form action="edit.php" method="POST">
 <input type="hidden" name="memids" value="<?php echo $id; ?>" />
-Edit Form<br>
+<strong>Edit Form</strong><br>
 <input type="text" name="studentMName" value="<?php echo $row['studentFName']; ?>" /><br>
 studentFName<br>
 <input type="text" name="studentMName" value="<?php echo $row['studentMName']; ?>" /><br>
 studentMName<br>
 <input type="text" name="studentLName" value="<?php echo $row['studentLName']; ?>" /><br>
 studentLName<br>
-<input type="text" name="studentDOB" value="<?php echo $row['studentDOB']; ?>" /><br>
+<input type="text" name="studentDOB" value="<?php echo $row['datetimepicker9']; ?>" /><br>
 studentDOB<br>
 <input type="text" name="gender" value="<?php echo $row['gender']; ?>" /><br>gender<br>
 <input type="text" name="studentCounty" value="<?php echo $row['studentCounty']; ?>" /><br>
