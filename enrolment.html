@@ -55,9 +55,7 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-</script>
- 
-<script type="text/javascript">
+
         $(function () {
             $('#datetimepicker9').datetimepicker({
                 viewMode: 'years'
@@ -67,9 +65,7 @@
 
             });
         });
-    </script>
-    <script type="text/javascript">
-   function resetForm(myFormId)
+      function resetForm(myFormId)
    {
        var myForm = document.getElementById(myFormId);
 
@@ -87,6 +83,7 @@
   
    
 </head>
+<body>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -108,7 +105,7 @@
 		</div>
 	</div>
 </nav> 
-<body>
+
 <div class="container">
 <form class="form-inline well" enctype="multipart/form-data" role="form" method="post" action="enrolment.php" >
 	<fieldset>
@@ -116,17 +113,17 @@
 	<div class="row">
 					<div class="form-inline col-md-3">
 						<label for="studentFName">First Name</label>
-	<input type="text" class="form-control" id="studentFName" name ="studentFName" placeholder="First Name">
+	<input type="text" class="form-control" id="studentFName" name ="studentFName" placeholder="First Name" value="">
 					</div>
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
 						<label for="studentMName">Middle Name</label>
-	<input type="text" class="form-control"	id ="studentMName" name ="studentMName" placeholder="Middle Name">
+	<input type="text" class="form-control"	id ="studentMName" name ="studentMName" placeholder="Middle Name" value="">
 					</div>
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
 						<label for="studentLName">Last Name</label>
-	<input type="text" class="form-control"	id ="studentLName" name ="studentLName" placeholder="Last Name">
+	<input type="text" class="form-control"	id ="studentLName" name ="studentLName" placeholder="Last Name" value="">
 					</div>
 				</div>
 	</fieldset>
@@ -139,7 +136,7 @@
             
          
             <div class='input-group date' id='datetimepicker9'>
-                <input data-provide="datepicker-inline" type='text' class="form-control" id="datetimepicker9" name="datetimepicker9" value="DateTimePicker">
+                <input data-provide="datepicker-inline" type='text' class="form-control" id="datetimepicker9" name="datetimepicker9" placeholder="DateTimePicker" value="">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span>
@@ -161,7 +158,7 @@
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
 						<label for="studentCounty">Current Residence (County) </label>
-	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County">
+	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County" value="">
 					</div>
                </div>
               
@@ -172,13 +169,13 @@
 		<legend>Educational Background</legend>
 		<div class="row">
 		<div class="form-inline col-md-3">
-						<label for="formerInstitution">Institution's Name</label>
-	<input type="text" class="form-control"	id = "formerInstitution" name ="formerInstitution" placeholder="Institution">
+						<label for="formerInstitution">Former Institution's Name</label>
+	<input type="text" class="form-control"	id = "formerInstitution" name ="formerInstitution" placeholder="Institution" value="">
 					</div>
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
 						<label for="classtoJoin">Class to Join</label>
-	<input type="text" class="form-control" id ="classtoJoin" name = "classtoJoin"	placeholder="Class in Numbers">
+	<input type="text" class="form-control" id ="classtoJoin" name = "classtoJoin"	placeholder="Class in Numbers" value="">
 					</div>
 					<div class="form-inline col-md-1"></div>
 					<div class="form-inline col-md-3">
@@ -188,17 +185,11 @@
 	<td>
     <img id="blah" src="#" alt="" />
     <input  name="uploadedimage" type="file" onchange="readURL(this);" />
-    
-	
-	</td>
-    
-   
-	
-	</tr>
+    </td>
+    </tr>
 	<tr>
 	<td>
-    
-	</td>
+    </td>
 	</tr>
 	</tbody></table>
     
@@ -211,22 +202,22 @@
 		<div class="row">
 			<div class="form-inline col-md-2">
 						<label for="parentName">Parent's Name</label>
-<input type="text" class="form-control" id ="parentName" name ="parentName"	placeholder="Parent">
+<input type="text" class="form-control" id ="parentName" name ="parentName"	placeholder="Parent" value="">
 					</div>
 <div class="form-inline col-md-1"></div>
 <div class="form-inline col-md-2">
 						<label for="mobileNumber">Mobile Number</label>
-<input type="text" class="form-control" id ="mobileNumber" name ="mobileNumber"	placeholder="Phone">
+<input type="text" class="form-control" id ="mobileNumber" name ="mobileNumber"	placeholder="Phone" value="">
 					</div>
 <div class="form-inline col-md-1"></div>
 <div class="form-inline col-md-2">
 						<label for="email">Email Address</label>
-<input type="email" class="form-control" id ="email" name ="email" placeholder="username@domain.com">
+<input type="email" class="form-control" id ="email" name ="email" placeholder="username@domain.com" value="">
 					</div>
 <div class="form-inline col-md-1"></div>
 <div class="form-inline col-md-3">
 						<label for="County">Current Residence (County)</label>
-<input type="text" class="form-control"	id ="County" name ="County" placeholder="Resident County">
+<input type="text" class="form-control"	id ="County" name ="County" placeholder="Resident County" value="">
 					</div>
 				</div>
 	</fieldset>
@@ -237,11 +228,11 @@
 <div class="form-inline col-md-3"></div>
 <div class="form-inline col-md-3"></div>
 <div class="form-inline col-md-3"> <input type="reset" class="btn btn-info" value="Reset" onclick="resetForm('myFormId'); return false;" /></div>  
-</div>
 </fieldset>
 </div>
 </form>
 </div> <!-- end of container -->
-</body>
+
 <script src="assets/js/bootstrap.min.js"></script>
+</body>
 </html>

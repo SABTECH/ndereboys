@@ -1,5 +1,7 @@
-<?php     
+<?php    
+date_default_timezone_set("Africa/Nairobi");
 error_reporting(0);
+
 $con = mysqli_connect("localhost", "root", "", "ndere_boys" ) or die(mysqli_error());
 
 $studentFName = mysqli_real_escape_string($con, $_POST['studentFName']);
@@ -13,7 +15,7 @@ $classtoJoin = mysqli_real_escape_string($con,$_POST['classtoJoin']);
 $parentName = mysqli_real_escape_string($con,$_POST['parentName']);
 $mobileNumber = mysqli_real_escape_string($con,$_POST['mobileNumber']);
 $email = mysqli_real_escape_string($con,$_POST['email']);
-$County = mysqli_real_escape_string($con,$_POST['County']);
+$parentCounty = mysqli_real_escape_string($con,$_POST['County']);
 
 function GetImageExtension($imagetype)
 	     {
@@ -39,12 +41,10 @@ function GetImageExtension($imagetype)
 	    $imagename=date("Y-m-d")."-".time().$ext;
 			 
 	    $target_path = $destination_path.basename($file_name);
-	    
-		$date = date("Y-m-d");
-		
-		move_uploaded_file($temp_name,$target_path);
+	    $date = date("Y-m-d H:i:s");
+	    move_uploaded_file($temp_name,$target_path);
 	
-$query_upload  = "insert into enrolment(studentFName, studentMName, studentLName, datetimepicker9, gender, studentCounty, formerInstitution, classJoin, parentName, mobileNumber, email, County,image, images_path, submission_date ) values ('$studentFName','$studentMName','$studentLName','$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$County','$temp_name', '$target_path', '$date')";
+$query_upload  = "insert into enrolment(studentFName, studentMName, studentLName, datetimepicker9, gender, studentCounty, formerInstitution, classJoin, parentName, mobileNumber, email, County,image, images_path, submission_date ) values ('$studentFName','$studentMName','$studentLName','$studentDOB','$gender','$studentCounty','$formerInstitution','$classtoJoin','$parentName','$mobileNumber','$email','$parentCounty','$temp_name', '$target_path', '$date')";
 
  mysqli_query($con,$query_upload) or die("error in $query_upload == ----> 
     ".mysqli_error($con)); 
