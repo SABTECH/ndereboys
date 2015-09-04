@@ -54,9 +54,9 @@ function GetImageExtension($imagetype)
  	$result='<div class="alert alert-success">Registration is Successful!</div>';
     } 
 	else {
-        $result='<div class="alert alert-danger">Sorry there was an error registering your details. Please try again and fill in all the fields.</div>';
+        $result='<div class="alert alert-danger">Sorry there was an error registering your details. Please fill in all the fields and try again.</div>';
     }
-
+    
 ?>
 <!DOCTYPE HTML>
 <html>
