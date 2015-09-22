@@ -81,7 +81,7 @@ function GetImageExtension($imagetype)
  $result='<div class="alert alert-success">Registration is Successful!</div>';
     } 
 	else {
-        $result='<div class="alert alert-danger">Sorry there was an error registering your details. Please try again and fill in all the fields.</div>';
+        $result='<div class="alert alert-danger">Sorry there was an error registering your details. Please fill in all the fields and try again.</div>';
     }
 }
 
@@ -200,17 +200,17 @@ function GetImageExtension($imagetype)
 	<fieldset>
 	<legend>Student's Details</legend>
 	<div class="row">
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-3">
 						<label for="studentFName">First Name</label>
 	<input type="text" class="form-control" id="studentFName" name ="studentFName" placeholder="First Name" value="<?php echo htmlspecialchars($_POST['studentFName']); ?>">  <?php echo "<p class='text-danger'>$errStudentFName</p>";?>
 					</div>
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 						<label for="studentMName">Middle Name</label>
 	<input type="text" class="form-control"	id ="studentMName" name ="studentMName" placeholder="Middle Name" value="<?php echo htmlspecialchars($_POST['studentMName']); ?>"> <?php echo "<p class='text-danger'>$errStudentMName</p>";?>
 					</div>
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 						<label for="studentLName">Last Name</label>
 	<input type="text" class="form-control"	id ="studentLName" name ="studentLName" placeholder="Last Name" value="<?php echo htmlspecialchars($_POST['studentLName']); ?>"> <?php echo "<p class='text-danger'>$errStudentLName</p>";?>
 					</div>
@@ -220,7 +220,7 @@ function GetImageExtension($imagetype)
 	<legend>Bio Data</legend>
 		
 	<div class="row">
-        <div class="form-inline col-md-3" style="height:130px;">
+        <div class="form-group col-md-3" style="height:130px;">
         <label for="datetimepicker9">Date of Birth YY-MM-DD</label>
             
          
@@ -234,8 +234,8 @@ function GetImageExtension($imagetype)
             
         </div>
 
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 					    <label for="gender">Select Gender:</label>
 						<label for="gender">
 							<input type="radio" class="radio-inline" id="1" name="gender" value='Male'> Male
@@ -244,8 +244,8 @@ function GetImageExtension($imagetype)
 							<input type="radio" class="radio-inline" id="2" name="gender" value='Female'> Female
 						</label>
 					</div>
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 						<label for="studentCounty">Current Residence (County) </label>
 	<input type="text" class="form-control" id ="studentCounty" name = "studentCounty"	placeholder="Resident County" value="">
 					</div>
@@ -256,17 +256,17 @@ function GetImageExtension($imagetype)
     <fieldset>
 		<legend>Educational Background</legend>
 		<div class="row">
-		<div class="form-inline col-md-3">
+		<div class="form-group col-md-3">
 						<label for="formerInstitution">Former Institution's Name</label>
 	<input type="text" class="form-control"	id = "formerInstitution" name ="formerInstitution" placeholder="Institution" value="">
 					</div>
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 						<label for="classtoJoin">Class to Join</label>
 	<input type="text" class="form-control" id ="classtoJoin" name = "classtoJoin"	placeholder="Class in Numbers" value="">
 					</div>
-					<div class="form-inline col-md-1"></div>
-					<div class="form-inline col-md-3">
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
 			<label for="Passport">Attach Student Passport Photo</label>
     <table style="border-collapse: collapse; font: 12px Tahoma;" border="1" cellspacing="5" cellpadding="5">
 	<tbody><tr>
@@ -282,28 +282,28 @@ function GetImageExtension($imagetype)
 	</tbody></table>
     
     </div>
-    <div class="form-inline col-md-1"></div>
+    <div class="form-group col-md-1"></div>
     </div>  <!-- end of row -->
 	</fieldset> <!-- end of fieldset -->
 	<fieldset>
 		<legend>Parent's Details</legend>
 		<div class="row">
-			<div class="form-inline col-md-2">
+			<div class="form-group col-md-2">
 						<label for="parentName">Parent's Name</label>
 <input type="text" class="form-control" id ="parentName" name ="parentName"	placeholder="Parent" value="">
 					</div>
-<div class="form-inline col-md-1"></div>
-<div class="form-inline col-md-2">
+<div class="form-group col-md-1"></div>
+<div class="form-group col-md-2">
 						<label for="mobileNumber">Mobile Number</label>
 <input type="text" class="form-control" id ="mobileNumber" name ="mobileNumber"	placeholder="Phone" value="">
 					</div>
-<div class="form-inline col-md-1"></div>
-<div class="form-inline col-md-2">
+<div class="form-group col-md-1"></div>
+<div class="form-group col-md-2">
 						<label for="email">Email Address</label>
 <input type="email" class="form-control" id ="email" name ="email" placeholder="username@domain.com"  value="<?php echo htmlspecialchars($_POST['email']); ?>">  <?php echo "<p class='text-danger'>$errEmail</p>";?>
 					</div>
-<div class="form-inline col-md-1"></div>
-<div class="form-inline col-md-3">
+<div class="form-group col-md-1"></div>
+<div class="form-group col-md-3">
 						<label for="County">Current Residence (County)</label>
 <input type="text" class="form-control"	id ="County" name ="County" placeholder="Resident County" value="">
 					</div>
@@ -312,10 +312,10 @@ function GetImageExtension($imagetype)
     <fieldset>
     <br>
 <div class="row">
-<div class="form-inline col-md-3"><input type="submit" class="btn btn-info" value="Submit"></div>
-<div class="form-inline col-md-3"> <?php echo $result; ?>  </div>
-<div class="form-inline col-md-3"></div>
-<div class="form-inline col-md-3"> <input type="reset" class="btn btn-info" value="Reset" onclick="resetForm('myFormId'); return false;" /></div>  
+<div class="form-group col-md-3"><input type="submit" class="btn btn-info" value="Submit"></div>
+<div class="form-group col-md-3"> <?php echo $result; ?>  </div>
+<div class="form-group col-md-3"></div>
+<div class="form-group col-md-3"> <input type="reset" class="btn btn-info" value="Reset" onclick="resetForm('myFormId'); return false;" /></div>  
 </div>
 </fieldset>
 
